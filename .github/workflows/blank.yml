@@ -33,7 +33,7 @@ jobs:
       
     - name: Authenticate DevHub
       run: |
-        node_modules/sfdx-cli/bin/run force:auth:jwt:grant --clientid 3MVG9YDQS5WtC11pG5NlgPmejyKzj7_Fn.iKGEr7CEmWe9KG7_mXmq8rP.pdMMik1Yxb5LCSOZmoKRDeNWQzU --jwtkeyfile workflows/server.key --username saravana@trailhead7.com --setdefaultdevhubusername -a devhub
+        node_modules/sfdx-cli/bin/run force:auth:jwt:grant --clientid 3MVG9YDQS5WtC11pG5NlgPmejyKzj7_Fn.iKGEr7CEmWe9KG7_mXmq8rP.pdMMik1Yxb5LCSOZmoKRDeNWQzU --jwtkeyfile .github/workflows/server.key --username saravana@trailhead7.com --setdefaultdevhubusername -a devhub
       
     - name: Define CI org
       run: node_modules/sfdx-cli/bin/run force:org:create -v devhub -s -f config/project-scratch-def.json -a ciorg -d 1
