@@ -35,7 +35,7 @@ jobs:
     
     - name: Authenticate DevHub
       run: | 
-        node_modules/sfdx-cli/bin/run auth:jwt:grant --clientid A6810ECFF72DE5AEF015664A5FBBE5995FBC4C201F9E96930EF85BA3E61CC6A6 --username saravana@trailhead7.com --jwtkeyfile server.key
+        node_modules/sfdx-cli/bin/run auth:jwt:grant --clientid 3MVG9YDQS5WtC11pG5NlgPmejyKzj7_Fn.iKGEr7CEmWe9KG7_mXmq8rP.pdMMik1Yxb5LCSOZmoKRDeNWQzU --username saravana@trailhead7.com --jwtkeyfile ${{ secrets.SALESFORCE_JWT_SECRET_KEY }}
       
     - name: Define CI org
       run: node_modules/sfdx-cli/bin/run force:org:create -v devhub -s -f config/project-scratch-def.json -a ciorg -d 1
